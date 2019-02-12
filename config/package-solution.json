@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "persona-card-client-side-solution",
+    "id": "233ebb60-68d4-4e7a-8dc0-3ea4fb5fff40",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/persona-card.sppkg"
+  }
+}

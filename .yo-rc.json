@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "persona-card",
+    "libraryId": "233ebb60-68d4-4e7a-8dc0-3ea4fb5fff40",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
