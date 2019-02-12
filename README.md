@@ -4,4 +4,8 @@ Credits to [Anil.Lakhagoudar](https://social.technet.microsoft.com/wiki/contents
 
 Demo of the livePersonaCard
 
+Multiple users
+![](/ReadmeIMG/PersonaDemo2.gif)
+
+Single card
 ![](/ReadmeIMG/PersonaDemo.gif)

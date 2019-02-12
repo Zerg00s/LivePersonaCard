@@ -7,8 +7,8 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 
-import SPFxPeopleCard, { IPeopleCardProps } from './components/SPFXPeopleCard/SPFxPeopleCard';
 import { PersonaSize, PersonaInitialsColor } from 'office-ui-fabric-react';
+import PersonaCollection from './components/PersonaCollection/PersonaCollection';
 
 import * as strings from 'PersonaCardWebPartStrings';
 
@@ -21,26 +21,13 @@ export interface IPersonaCardWebPartProps {
 export default class PersonaCardWebPart extends BaseClientSideWebPart<IPersonaCardWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IPeopleCardProps> = React.createElement(
-      SPFxPeopleCard, {  
-        primaryText: this.context.pageContext.user.displayName,
-        email: this.context.pageContext.user.email ? this.context.pageContext.user.email : this.context.pageContext.user.loginName,
-        serviceScope: this.context.serviceScope,
-        class: 'persona-card',
-        size: PersonaSize.regular,
-        initialsColor: PersonaInitialsColor.darkBlue,
-        // moreDetail: this.personaDetail(), /* pass react element */
-        moreDetail: '<div>detail1 <br/> detail2</div>', /* pass html string */
-        onCardOpenCallback: ()=>{
-          console.log('WebPart','on card open callaback');
-        },
-        onCardCloseCallback: ()=>{
-          console.log('WebPart','on card close callaback');
-        }
-      }
+    
+
+    const PersonaCollectionElement = React.createElement(
+      PersonaCollection, {context: this.context}
     );
 
-    ReactDom.render(element, this.domElement);
+    ReactDom.render(PersonaCollectionElement, this.domElement);
   }
 
   protected onDispose(): void {
